@@ -22,6 +22,13 @@ Got help from a mixture of things including Jacob Knaack and ChatGPT
 
 <img width="691" alt="Screenshot 2023-08-21 at 1 51 42 PM" src="https://github.com/SamaadTurner/city-explorer/assets/86858940/537d1afd-a74c-4511-b54e-6737ea9d7da5">  
 
+Name of feature: added back and front end functionality
 
+Estimate of time needed to complete: 5 hours
+
+Start time: 2:00pm
+Finish time: 2:00pm (next day)
+
+Actual time needed to complete: 24 hrs (including sleep)
 
 
