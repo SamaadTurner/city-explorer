@@ -4,8 +4,9 @@ import { Form, Button, Card } from 'react-bootstrap';
 import './App.css';
 import axios from 'axios';
 import Map from './component/Map';
+import { responsivePropType } from 'react-bootstrap/esm/createUtilityClasses';
 
-const api_key = import.meta.env.VITE_API_KEY;
+const api_key = import.meta.env.VITE_LOCATIONIQ_API_KEY;
 const apiURL = 'https://us1.locationiq.com/v1/search';
 
 class App extends React.Component {
@@ -30,9 +31,10 @@ class App extends React.Component {
     const { searchQuery } = this.state;
     try {
       const locationResponse = await axios.get(`${apiURL}?key=${api_key}&q=${searchQuery}&format=json`);
-      const expressServerResponse = await axios.get(`http://localhost:3001/weather?lat=${locationResponse.data[0].lat}&lon=${locationResponse.data[0].on}&searchQuery=${searchQuery}`);
+      console.log(locationResponse.data);
+      const expressServerResponse = await axios.get(`http://localhost:3001/weather?lat=${locationResponse.data[0].lat}&lon=${locationResponse.data[0].lon}&searchQuery=${searchQuery}`);
       this.setState({
-        apiResults: locationResponse.data,
+        apiResults: [locationResponse.data[0]],
         forecasts: expressServerResponse.data
       });
       console.log(locationResponse.data, expressServerResponse.data);
@@ -44,7 +46,8 @@ class App extends React.Component {
   };
 
   render() {
-    const { lat, lon, api_key } = this.props;
+    const { lat, lon} = this.props;
+    console.log(api_key);
     const staticMapUrl = `https://maps.locationiq.com/v3/staticmap?key=${api_key}&center=${lat},${lon}&zoom=9`;
 
     const { apiResults, error, forecasts } = this.state;

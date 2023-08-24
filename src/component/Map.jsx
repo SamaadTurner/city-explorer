@@ -1,6 +1,6 @@
 import React from 'react';
 
-const api_key = import.meta.env.VITE_API_KEY;
+const api_key = import.meta.env.VITE_LOCATIONIQ_API_KEY;
 
 class Map extends React.Component {
     constructor() {
