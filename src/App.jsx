@@ -4,10 +4,14 @@ import { Form, Button, Card } from 'react-bootstrap';
 import './App.css';
 import axios from 'axios';
 import Map from './component/Map';
+// import Error from './component/Error';
+// import Weather from './component/Weather';
+// import Movie from './component/Movie';
 import { responsivePropType } from 'react-bootstrap/esm/createUtilityClasses';
 
 const api_key = import.meta.env.VITE_LOCATIONIQ_API_KEY;
 const apiURL = 'https://us1.locationiq.com/v1/search';
+
 
 class App extends React.Component {
   constructor() {
@@ -16,7 +20,9 @@ class App extends React.Component {
       searchQuery: '',
       apiResults: [],
       forecasts: [],
-      error: null,
+      // error: null,
+      // mapURL: null,
+      // movieData: null,
     };
   }
 
