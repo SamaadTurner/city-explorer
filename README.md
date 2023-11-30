@@ -7,7 +7,7 @@ City-Explorer
 Imagine you want directions of a city of your picking. This assignment will demonstrate an understanding of API's and how to render requests to the screen.   
 
 ## Getting Started
-You can just follow my link to my nelify and it is an already published site: https://city-explorer253.netlify.app/
+You can just follow my link to my netlify and it is an already published site: https://city-explorer253.netlify.app/
 
 ## Architecture  
 I used bootstrap to make cards. LocationIQ was used to fetch all information shown on screen.
